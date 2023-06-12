@@ -5,19 +5,105 @@
 
     // pages
     import Home from "./pages/Home.svelte";
+    import Menu from "./pages/Menu.svelte"; 
+    import Order from "./pages/Order.svelte";
 
-    let tabs = ["Home", "Order", "Price List"];
-    let activeItem = tabs[0];
+    let tabs = ["Home", "Menu", "Order"];
+    let activeItem = tabs[1];
     let showNave = false;
 
     function tabChange(e) {
         activeItem = e.detail;
-        toggleNave();
-        console.log(typeof e.detail);
+        toggleNave(); 
     }
     function toggleNave() {
         showNave = !showNave;
     }
+
+    // export let cakes: Array<{price: number, shape: string, seize: number}>
+    let cakes = [
+        {
+            price: 12,
+            shape: "sheet",
+            size: 14,
+        },
+        {
+            price: 20,
+            shape: "sheet",
+            size: 16,
+        },
+        {
+            price: 12,
+            shape: "sheet",
+            size: 14,
+        },
+        {
+            price: 20,
+            shape: "sheet",
+            size: 16,
+        },
+        {
+            price: 12,
+            shape: "sheet",
+            size: 14,
+        },
+        {
+            price: 20,
+            shape: "sheet",
+            size: 16,
+        },
+        {
+            price: 12,
+            shape: "sheet",
+            size: 14,
+        },
+        {
+            price: 20,
+            shape: "sheet",
+            size: 16,
+        },
+        {
+            price: 12,
+            shape: "sheet",
+            size: 14,
+        },
+        {
+            price: 20,
+            shape: "sheet",
+            size: 16,
+        },
+        {
+            price: 12,
+            shape: "sheet",
+            size: 14,
+        },
+        {
+            price: 20,
+            shape: "sheet",
+            size: 16,
+        },
+        {
+            price: 12,
+            shape: "sheet",
+            size: 14,
+        },
+        {
+            price: 20,
+            shape: "sheet",
+            size: 16,
+        },
+        {
+            price: 12,
+            shape: "sheet",
+            size: 14,
+        },
+        {
+            price: 20,
+            shape: "sheet",
+            size: 16,
+        },
+
+    ];
 </script>
 
 <main>
@@ -32,10 +118,10 @@
     <div class="pages">
         {#if activeItem === "Home"}
             <Home />
+        {:else if activeItem === "Menu"}
+            <Menu {cakes} />
         {:else if activeItem === "Order"}
-            <div>Order</div>
-        {:else if activeItem === "Price List"}
-            <div>Price List</div>
+            <Order />
         {/if}
     </div>
     <Footer />
@@ -43,7 +129,7 @@
 
 <style>
     .pages {
-            padding-top: 100px;
-            padding-bottom: 50px;
-        }
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
 </style>

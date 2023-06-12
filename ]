@@ -1,0 +1,17 @@
+<script lang="ts">  
+    import Cake_store from "../stores/Cakes";
+    import { onDestroy } from "svelte";
+    
+    let list;
+
+    const stuff = Cake_store.subscribe(value => {
+            list = value
+        })
+    console.log(list)
+
+   onDestroy{
+           stuff()
+       } 
+</script>
+
+<div>Order = {$Cake_store}</div>

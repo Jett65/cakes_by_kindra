@@ -13,7 +13,7 @@
         <div
             class="block"
             in:fly={{ x: 200, duration: 200 }}
-            out:fly={{ delay: 300, x: 200, duration: 200 }}
+            out:fly={{ delay: 220, x: 200, duration: 200 }}
         >
             <ul>
                 {#each items as item}
@@ -66,6 +66,7 @@
         margin: 10px;
     }
     .tab:hover {
+        cursor: pointer;
         color: #4b4b4b;
     }
 </style>
