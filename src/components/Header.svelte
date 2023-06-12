@@ -31,7 +31,7 @@
         }
     img {  
         grid-column: 2;  
-        margin-left: 40%;
+        margin-left: 45%;
         width: 100px;
     }
 </style>

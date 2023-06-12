@@ -9,19 +9,20 @@
 
 <style>
     .nave {
+        cursor: pointer; 
         background-color: transparent;
         border: none;
         padding: 0;
         margin: 0;
         width: 37px;
         height: 31px;
-        margin-top: 65%;
+        margin-top: 65%; 
     }
     .nave:hover {
         border-radius: 5px;
         background-color: lightgray;
     }
-    .line {
+    .line { 
         background-color: black;
         display: flex;
         justify-content: center;
