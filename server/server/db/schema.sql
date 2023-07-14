@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS cakes_db;
-CREATE DATABASE cakes_db;
+DROP DATABASE IF EXISTS orders_db;
+CREATE DATABASE orders_db;
 
-use cakes_db
+use orders_db;
 
